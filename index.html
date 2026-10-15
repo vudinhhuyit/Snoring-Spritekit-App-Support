@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snoring – Support & Privacy</title>
+<meta name="description" content="Support and privacy policy for the Snoring iOS game.">
+<style>
+  :root {
+    --bg: #f4f8fd;
+    --card: #ffffff;
+    --text: #1d2733;
+    --muted: #5b6878;
+    --accent: #5b6b8c;
+    --sky: #2388ec;
+    --line: #dde6f0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1620;
+      --card: #18222f;
+      --text: #e7edf4;
+      --muted: #9aa8b8;
+      --accent: #9fb0d6;
+      --sky: #5aa9f5;
+      --line: #273444;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    position: relative;
+    background: linear-gradient(180deg, #2388ec, #9cc9f6);
+    color: #fff;
+    padding: 56px 16px 40px;
+    text-align: center;
+  }
+  header img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+  header h1 { margin: 16px 0 4px; font-size: 32px; }
+  header p { margin: 0; opacity: .9; }
+
+  .lang-switch {
+    position: absolute; top: 16px; right: 16px;
+    display: inline-flex; padding: 3px; border-radius: 999px;
+    background: rgba(255,255,255,.22);
+  }
+  .lang-switch button {
+    border: 0; background: transparent; color: #fff; cursor: pointer;
+    font: 600 14px/1 inherit; font-family: inherit;
+    padding: 8px 14px; border-radius: 999px;
+  }
+  .lang-switch button[aria-pressed="true"] { background: #fff; color: #1d6fc4; }
+
+  nav { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+  nav a {
+    color: #fff; text-decoration: none; font-weight: 600;
+    padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.2);
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 24px; margin-top: 24px; scroll-margin-top: 16px;
+  }
+  h2 { margin-top: 0; font-size: 24px; }
+  h3 { margin-bottom: 4px; font-size: 18px; }
+  a { color: var(--sky); }
+  .muted { color: var(--muted); font-size: 14px; }
+  .contact {
+    display: inline-block; margin-top: 8px; padding: 10px 18px; border-radius: 10px;
+    background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    word-break: break-all;
+  }
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 32px; }
+
+  /* Only the selected language is shown. */
+  [data-lang] { display: none; }
+  html[lang="en"] [data-lang="en"], html[lang="vi"] [data-lang="vi"] { display: revert; }
+</style>
+<script>
+  // Pick the language before first paint: ?lang= > saved choice > browser language.
+  (function () {
+    var lang = new URLSearchParams(location.search).get("lang");
+    if (lang !== "en" && lang !== "vi") {
+      try { lang = localStorage.getItem("lang"); } catch (e) { lang = null; }
+    }
+    if (lang !== "en" && lang !== "vi") {
+      lang = (navigator.language || "en").toLowerCase().indexOf("vi") === 0 ? "vi" : "en";
+    }
+    document.documentElement.lang = lang;
+  })();
+</script>
+</head>
+<body>
+<header>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-set-lang="en">EN</button>
+    <button type="button" data-set-lang="vi">VI</button>
+  </div>
+  <img src="icon.png" alt="Snoring">
+  <h1>Snoring</h1>
+  <p data-lang="en">Wake the snoring elephant</p>
+  <p data-lang="vi">Đánh thức chú voi đang ngáy</p>
+  <nav>
+    <a href="#support"><span data-lang="en">Support</span><span data-lang="vi">Hỗ trợ</span></a>
+    <a href="#privacy"><span data-lang="en">Privacy Policy</span><span data-lang="vi">Quyền riêng tư</span></a>
+  </nav>
+</header>
+
+<main>
+  <!-- Support -->
+  <section id="support">
+    <div data-lang="en">
+      <h2>Support</h2>
+      <p>Need help with Snoring, found a bug, or have a suggestion? Send us an email and we will get back to you as soon as we can.</p>
+      <a class="contact" href="mailto:vudinhhuyit@gmail.com?subject=Snoring%20Support">vudinhhuyit@gmail.com</a>
+      <p class="muted">Please include your device model and iOS / iPadOS version.</p>
+
+      <h3>How do I play?</h3>
+      <p>The elephant is snoring. Tap the animals to set off a chain reaction that bumps into him: once he wakes up and tumbles off his ledge, the level is done.</p>
+
+      <h3>What does each animal do?</h3>
+      <p>Owls drop when tapped. Zebras jump when tapped. Cows switch between rolling and standing still each time you tap them. Pigs roll when something pushes them, penguins spin away when bumped, and giraffes tip over.</p>
+
+      <h3>How is the score worked out?</h3>
+      <p>Every level starts at 112 and counts down once a second. The faster you wake the elephant, the higher your score.</p>
+
+      <h3>I am stuck</h3>
+      <p>Tap <em>Reset</em> to start the level again. Tap <em>Menu</em> to go back to the level map and replay any level you have unlocked.</p>
+
+      <h3>How do I turn the sound off?</h3>
+      <p>Tap the speaker button on the main menu or at the top of the screen during a level.</p>
+
+      <h3>My progress is gone</h3>
+      <p>Progress is stored only on your device. Deleting the app, or choosing <em>New Game</em> and confirming, erases your scores.</p>
+    </div>
+
+    <div data-lang="vi">
+      <h2>Hỗ trợ</h2>
+      <p>Cần trợ giúp, gặp lỗi hoặc có góp ý về Snoring? Hãy gửi email cho chúng tôi, chúng tôi sẽ phản hồi sớm nhất có thể.</p>
+      <a class="contact" href="mailto:vudinhhuyit@gmail.com?subject=Snoring%20Support">vudinhhuyit@gmail.com</a>
+      <p class="muted">Vui lòng ghi kèm tên thiết bị và phiên bản iOS / iPadOS.</p>
+
+      <h3>Chơi như thế nào?</h3>
+      <p>Chú voi đang ngáy rất to. Hãy chạm vào các con vật để tạo phản ứng dây chuyền va vào voi: khi voi tỉnh dậy và ngã khỏi mỏm đá, bạn qua màn.</p>
+
+      <h3>Mỗi con vật làm gì?</h3>
+      <p>Cú rơi xuống khi được chạm. Ngựa vằn nhảy lên khi được chạm. Bò chuyển giữa lăn tròn và đứng yên mỗi lần chạm. Heo lăn khi bị đẩy, chim cánh cụt xoay tít khi bị va, còn hươu cao cổ sẽ đổ.</p>
+
+      <h3>Điểm được tính thế nào?</h3>
+      <p>Mỗi màn bắt đầu với 112 điểm và giảm 1 điểm mỗi giây. Đánh thức voi càng nhanh, điểm càng cao.</p>
+
+      <h3>Tôi bị kẹt</h3>
+      <p>Chạm <em>Reset</em> để chơi lại màn. Chạm <em>Menu</em> để về bản đồ màn chơi và chọn lại bất kỳ màn nào đã mở khoá.</p>
+
+      <h3>Làm sao tắt âm thanh?</h3>
+      <p>Chạm nút loa ở menu chính hoặc ở phía trên màn hình khi đang chơi.</p>
+
+      <h3>Tiến trình của tôi bị mất</h3>
+      <p>Tiến trình chỉ được lưu trên thiết bị của bạn. Xoá ứng dụng, hoặc chọn <em>New Game</em> rồi xác nhận, sẽ xoá điểm đã lưu.</p>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div data-lang="en">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: October 15, 2026</p>
+      <p>This policy explains how the Snoring app (“the app”) handles your information.</p>
+
+      <h3>Data we collect</h3>
+      <p>We do not collect, store, or share any personal data. The app has no accounts, no analytics, no advertising, and no tracking, and it does not connect to the internet.</p>
+
+      <h3>Data stored on your device</h3>
+      <p>The app saves your level scores and your sound on/off setting locally on your device. This data never leaves your device and is deleted when you delete the app.</p>
+
+      <h3>Third-party services</h3>
+      <p>The app does not use any third-party SDKs, advertising networks, or analytics services.</p>
+
+      <h3>Children’s privacy</h3>
+      <p>Because the app collects no personal information, it is safe for players of all ages.</p>
+
+      <h3>Changes to this policy</h3>
+      <p>If this policy changes, we will update this page and the date above.</p>
+
+      <h3>Contact</h3>
+      <p>Questions about this policy? Email <a href="mailto:vudinhhuyit@gmail.com">vudinhhuyit@gmail.com</a>.</p>
+    </div>
+
+    <div data-lang="vi">
+      <h2>Chính sách quyền riêng tư</h2>
+      <p class="muted">Cập nhật lần cuối: 15/10/2026</p>
+      <p>Chính sách này giải thích cách ứng dụng Snoring (“ứng dụng”) xử lý thông tin của bạn.</p>
+
+      <h3>Dữ liệu chúng tôi thu thập</h3>
+      <p>Chúng tôi không thu thập, lưu trữ hay chia sẻ bất kỳ dữ liệu cá nhân nào. Ứng dụng không có tài khoản, không phân tích hành vi, không quảng cáo, không theo dõi và không kết nối Internet.</p>
+
+      <h3>Dữ liệu lưu trên thiết bị</h3>
+      <p>Ứng dụng lưu các màn đã mở khoá và cài đặt bật/tắt âm thanh ngay trên thiết bị của bạn. Dữ liệu này không bao giờ rời khỏi thiết bị và sẽ bị xoá khi bạn xoá ứng dụng.</p>
+
+      <h3>Dịch vụ bên thứ ba</h3>
+      <p>Ứng dụng không sử dụng SDK bên thứ ba, mạng quảng cáo hay dịch vụ phân tích nào.</p>
+
+      <h3>Quyền riêng tư của trẻ em</h3>
+      <p>Vì ứng dụng không thu thập thông tin cá nhân nào, người chơi ở mọi lứa tuổi đều có thể sử dụng an toàn.</p>
+
+      <h3>Thay đổi chính sách</h3>
+      <p>Nếu chính sách này thay đổi, chúng tôi sẽ cập nhật trang này và ngày ở trên.</p>
+
+      <h3>Liên hệ</h3>
+      <p>Có thắc mắc về chính sách này? Gửi email tới <a href="mailto:vudinhhuyit@gmail.com">vudinhhuyit@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Snoring</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll("[data-set-lang]");
+    var titles = { en: "Snoring – Support & Privacy", vi: "Snoring – Hỗ trợ & Quyền riêng tư" };
+    function apply(lang) {
+      root.lang = lang;
+      document.title = titles[lang];
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)); });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        apply(b.dataset.setLang);
+        try { localStorage.setItem("lang", b.dataset.setLang); } catch (e) {}
+      });
+    });
+    apply(root.lang);
+  })();
+</script>
+</body>
+</html>
