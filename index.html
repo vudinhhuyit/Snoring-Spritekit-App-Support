@@ -76,6 +76,8 @@
     background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
     word-break: break-all;
   }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
   footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 16px 32px; }
 
   /* Only the selected language is shown. */
@@ -103,16 +105,77 @@
     <button type="button" data-set-lang="vi">VI</button>
   </div>
   <img src="icon.png" alt="Snoring">
-  <h1>Snoring</h1>
-  <p data-lang="en">Wake the snoring elephant</p>
-  <p data-lang="vi">Đánh thức chú voi đang ngáy</p>
+  <h1 data-lang="en">Snoring: Wake the Elephant</h1>
+  <h1 data-lang="vi">Snoring: Đánh thức chú voi</h1>
+  <p data-lang="en">Tap animals, topple the snorer</p>
+  <p data-lang="vi">Chạm thú, làm voi tỉnh giấc</p>
   <nav>
+    <a href="#about"><span data-lang="en">About</span><span data-lang="vi">Giới thiệu</span></a>
     <a href="#support"><span data-lang="en">Support</span><span data-lang="vi">Hỗ trợ</span></a>
     <a href="#privacy"><span data-lang="en">Privacy Policy</span><span data-lang="vi">Quyền riêng tư</span></a>
   </nav>
 </header>
 
 <main>
+  <!-- About -->
+  <section id="about">
+    <div data-lang="en">
+      <h2>About</h2>
+      <p>Snoring is a cheerful physics puzzle game. A big grey elephant has fallen asleep on a ledge and his rumbling snores are keeping everyone awake. Help the animals wake him up!</p>
+      <p>Every level is a small chain-reaction puzzle. Tap the right animal at the right moment, let physics do the rest, and watch the elephant tumble off his perch.</p>
+
+      <h3>Meet the animals</h3>
+      <ul>
+        <li>Owls drop from their branch when you tap them</li>
+        <li>Zebras jump when tapped</li>
+        <li>Cows roll like a ball, then stand firm when you tap them again</li>
+        <li>Pigs roll when something pushes them</li>
+        <li>Penguins spin away when they are bumped</li>
+        <li>Giraffes tip over when something hits them</li>
+      </ul>
+
+      <h3>Features</h3>
+      <ul>
+        <li>35 hand-made levels, from a gentle introduction to tricky combinations of every animal</li>
+        <li>Real physics: rolling, bouncing, see-saws and moving cloud platforms</li>
+        <li>Beat the clock: every level starts at 112 points and counts down, so the quicker you solve it the higher your score</li>
+        <li>Level map to replay any unlocked level and improve your total score</li>
+        <li>Short tutorials introduce each animal the first time you meet it</li>
+        <li>Fully offline, with no ads, no in-app purchases and no data collection</li>
+        <li>Plays on iPhone and iPad</li>
+      </ul>
+      <p>Can you wake the elephant in all 35 levels?</p>
+    </div>
+
+    <div data-lang="vi">
+      <h2>Giới thiệu</h2>
+      <p>Snoring là game giải đố vật lý vui nhộn. Một chú voi xám to lớn ngủ quên trên mỏm đá và tiếng ngáy ầm ầm của chú khiến cả khu rừng không ngủ được. Hãy giúp các bạn thú đánh thức chú voi!</p>
+      <p>Mỗi màn chơi là một câu đố phản ứng dây chuyền. Chạm đúng con vật vào đúng lúc, để vật lý làm phần còn lại, và xem chú voi lăn khỏi chỗ nằm.</p>
+
+      <h3>Làm quen các bạn thú</h3>
+      <ul>
+        <li>Cú rơi khỏi cành khi được chạm</li>
+        <li>Ngựa vằn nhảy lên khi được chạm</li>
+        <li>Bò lăn tròn như quả bóng, chạm lần nữa thì đứng yên</li>
+        <li>Heo lăn khi bị đẩy</li>
+        <li>Chim cánh cụt xoay tít khi bị va</li>
+        <li>Hươu cao cổ đổ khi bị va trúng</li>
+      </ul>
+
+      <h3>Tính năng</h3>
+      <ul>
+        <li>35 màn chơi thủ công, từ nhập môn nhẹ nhàng tới những màn kết hợp mọi loài thú</li>
+        <li>Vật lý chân thực: lăn, nảy, bập bênh và mây di động</li>
+        <li>Đua với thời gian: mỗi màn bắt đầu với 112 điểm và giảm dần, giải càng nhanh điểm càng cao</li>
+        <li>Bản đồ màn chơi để chơi lại bất kỳ màn nào đã mở khoá</li>
+        <li>Hướng dẫn ngắn giới thiệu từng loài thú ở lần gặp đầu tiên</li>
+        <li>Chơi hoàn toàn offline, không quảng cáo, không mua trong ứng dụng, không thu thập dữ liệu</li>
+        <li>Chơi trên iPhone và iPad</li>
+      </ul>
+      <p>Bạn có đánh thức được chú voi trong cả 35 màn không?</p>
+    </div>
+  </section>
+
   <!-- Support -->
   <section id="support">
     <div data-lang="en">
